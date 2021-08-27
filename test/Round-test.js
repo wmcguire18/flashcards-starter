@@ -34,25 +34,5 @@ it('should update correct or incorrect guesses', function() {
 
   expect(round.takeTurn('function')).to.equal('function is incorrect!');
   })
-
-  it('calculatePercentCorrect should return correct percentage', function() {
-
-      round.takeTurn('object');
-      expect(round.calculatePercentCorrect()).to.equal('You got 100% correct!');
-      round.takeTurn('filter');
-      expect(round.calculatePercentCorrect()).to.equal('You got 50% correct!');
-      round.takeTurn('for loop');
-      expect(round.calculatePercentCorrect()).to.equal('You got 33% correct!');
-
-    });
-
-    it('endRound method returns correct percentage', function() {
-
-  round.takeTurn('object');
-  round.takeTurn('filter');
-  round.takeTurn('for loop');
-  expect(round.endRound()).to.equal('You got 33% correct!');
-
-});
-
+  
 });
